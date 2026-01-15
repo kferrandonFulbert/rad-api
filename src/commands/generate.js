@@ -12,7 +12,7 @@ export async function generate(type, tableName, pathOverride='output') {
     const { tableSingular, tablePlural } = formatTableName(tableName);
 
     // Récupérer le template
-    let content = readTemplate('route');
+    let content = readTemplate(type);
 
     // Remplacer les placeholders
     content = content.replace(/{{TABLE_SINGULAR}}/g, tableSingular);

@@ -6,9 +6,9 @@ const router = Router();
 
 /**
  * @openapi
- * /{TABLE_SINGULAR}/:
+ * {{TABLE_SINGULAR}}:
  *   get:
- *     summary: get all {TABLE_PLURAL}
+ *     summary: get all {{TABLE_PLURAL}}
  *     responses:
  *       200:
  *         description: OK
