@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { parseArgs } from './src/utils/parser.js';
-import { generateRoute, generateController } from './src/commands/generate.js';
+import { generate } from './src/commands/generate.js';
 
 async function main() {
     const args = parseArgs(process.argv.slice(2));
@@ -13,14 +13,10 @@ console.log(args);
                 console.log('Usage: kapi generate route <tableName>');
                 process.exit(1);
             }
-            if (args.type === 'route') {
-                await generateRoute(args.table, args.path);
+            if (args.type) {
+                await generate(args.type, args.table, args.path);
             }
 
-            else if (args.type === 'controller') {
-                
-                await generateController(args.table, args.path);
-            }
         }
         else {
             console.log('🔧 KAPI - Rapid API Development');
