@@ -1,0 +1,28 @@
+{
+  "name": "rad-api",
+  "version": "1.0.0",
+  "description": "RAD pour créer des routes, controller, model ... etc",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "kapi": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kferrandonFulbert/rad-api.git"
+  },
+  "keywords": [
+    "RAD",
+    "API",
+    "automation"
+  ],
+  "author": "kferrandon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kferrandonFulbert/rad-api/issues"
+  },
+  "homepage": "https://github.com/kferrandonFulbert/rad-api#readme"
+}
