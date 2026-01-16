@@ -1,11 +1,11 @@
 import { Router } from 'express';
 import {
-    all,
-    getById,
+    findAll,
+    findById,
     search,
     create,
     update,
-    deleteItem
+    remove
 } from '../controllers/{{TABLE_SINGULAR}}.controller.js';
 import { authMiddleware } from '../middlewares/auth.middleware.js';
 
@@ -35,7 +35,7 @@ const router = Router();
  *       201:
  *         description: {{TABLE_SINGULAR}} created
  */
-router.get('/', all);
+router.get('/', findAll);
 router.post('/', create);
 
 /**
@@ -98,8 +98,8 @@ router.get('/search', search);
  *       404:
  *         description: {{TABLE_SINGULAR}} not found
  */
-router.get('/:id', getById);
+router.get('/:id', findById);
 router.put('/:id', update);
-router.delete('/:id', deleteItem);
+router.delete('/:id', remove);
 
 export default router;

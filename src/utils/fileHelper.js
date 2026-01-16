@@ -13,8 +13,11 @@ export function getOutputPath(tableName, type = 'route', pathOverride = 'output'
     } else {
         cwd = pathOverride;
     }
-
-    return path.join(cwd, `${tableName}.${type}.js`);
+    let fileType = type;
+if(type==='route'){
+    fileType = 'routes';
+}
+    return path.join(cwd, `${tableName}.${fileType}.js`);
 }
 
 export function fileExists(filePath) {
