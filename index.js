@@ -5,7 +5,7 @@ import { generate } from './src/commands/generate.js';
 
 async function main() {
     const args = parseArgs(process.argv.slice(2));
-console.log(args);
+ //   console.log(args);
     try {
         if (args.command === 'generate') {
             if (!args.table) {
@@ -14,6 +14,7 @@ console.log(args);
                 process.exit(1);
             }
             if (args.type) {
+                console.log(`Generating ${args.type} for table: ${args.table}`);
                 await generate(args.type, args.table, args.path);
             }
 

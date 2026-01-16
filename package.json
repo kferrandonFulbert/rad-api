@@ -1,6 +1,6 @@
 {
   "name": "rad-api",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "RAD pour créer des routes, controller, model ... etc",
   "main": "index.js",
   "type": "module",

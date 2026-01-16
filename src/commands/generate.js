@@ -2,6 +2,7 @@ import { readTemplate, writeFile, getOutputPath, fileExists } from '../utils/fil
 import { formatTableName } from '../utils/stringHelper.js';
 
 export async function generate(type, tableName, pathOverride='output') {
+  console.log("Generating...", type, tableName, pathOverride);
   try {
     // Valider le nom de la table
     if (!tableName || tableName.trim() === '') {
